@@ -12,6 +12,7 @@ app.use(
     origin: "http://localhost:3000",
     // origin:"https://fascinating-conkies-a586da.netlify.app/",
     methods: "GET,POST,PUT,DELETE",
+    credentials: true,
   })
 );
 
