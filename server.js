@@ -7,7 +7,13 @@ const cookieParser = require("cookie-parser");
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(
+  cors({
+    origin: "http://localhost:3000",
+    // origin:"https://fascinating-conkies-a586da.netlify.app/",
+    methods: "GET,POST,PUT,DELETE",
+  })
+);
 
 
 const URI = process.env.MONGODB_URL;
